@@ -9,6 +9,24 @@ function api_docs_schema_retrieve(payload) {
 function api_v1_login_create(payload) {
   return juandevAPI.post(`/api/v1/login/`, payload.data)
 }
+function api_v1_malzhar_list(payload) {
+  return juandevAPI.get(`/api/v1/malzhar/`)
+}
+function api_v1_malzhar_create(payload) {
+  return juandevAPI.post(`/api/v1/malzhar/`, payload.data)
+}
+function api_v1_malzhar_retrieve(payload) {
+  return juandevAPI.get(`/api/v1/malzhar/${payload.id}/`)
+}
+function api_v1_malzhar_update(payload) {
+  return juandevAPI.put(`/api/v1/malzhar/${payload.id}/`, payload.data)
+}
+function api_v1_malzhar_partial_update(payload) {
+  return juandevAPI.patch(`/api/v1/malzhar/${payload.id}/`, payload.data)
+}
+function api_v1_malzhar_destroy(payload) {
+  return juandevAPI.delete(`/api/v1/malzhar/${payload.id}/`)
+}
 function api_v1_signup_create(payload) {
   return juandevAPI.post(`/api/v1/signup/`, payload.data)
 }
@@ -48,6 +66,12 @@ function rest_auth_user_partial_update(payload) {
 export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
+  api_v1_malzhar_list,
+  api_v1_malzhar_create,
+  api_v1_malzhar_retrieve,
+  api_v1_malzhar_update,
+  api_v1_malzhar_partial_update,
+  api_v1_malzhar_destroy,
   api_v1_signup_create,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
